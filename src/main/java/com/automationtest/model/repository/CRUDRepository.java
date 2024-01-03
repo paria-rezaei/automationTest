@@ -41,6 +41,7 @@ public class CRUDRepository<T,I> implements AutoCloseable{
     }
 
     public T findById(Class<T> tClass,I id){
+
         return (T) entityManager.find(tClass,id);
     }
 

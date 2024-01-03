@@ -9,8 +9,9 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
+import java.util.List;
 
-    @NoArgsConstructor
+@NoArgsConstructor
     @Getter
     @Setter
     @SuperBuilder
@@ -48,11 +49,11 @@ import java.io.Serializable;
         @OneToOne(cascade = CascadeType.ALL)
         private Person personId;
 
-//should be many to many
-        @OneToOne
-        private Section sectionId;
+        @ManyToMany
+        private List<Section> sectionId;
 
-        private String specificPrivilegeLevel;
+        @OneToOne
+        private AccessLevel access;
 
         @Column(name="u_active")
         private boolean active;

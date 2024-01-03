@@ -35,7 +35,6 @@ import java.io.Serializable;
 })
 public class Person implements Serializable {
     @Id
-    @SequenceGenerator(name = "personSeq", sequenceName = "person_seq")
     @GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "personSeq")
     @Column(name = "p_id")
     private long id;

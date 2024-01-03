@@ -4,7 +4,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JpaProvider {
-    private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("mft");
+    private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("automationTest");
 
     private JpaProvider() {
     }
